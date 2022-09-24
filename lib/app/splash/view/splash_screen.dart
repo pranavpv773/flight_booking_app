@@ -1,4 +1,4 @@
-import 'package:flight_booking_app/app/core/images.dart';
+import 'package:flight_booking_app/app/core/styles/images.dart';
 import 'package:flight_booking_app/app/core/styles/styles.dart';
 import 'package:flight_booking_app/app/core/widgets/buttons.dart';
 import 'package:flutter/material.dart';
@@ -57,20 +57,44 @@ class SplashScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                width: kWidth,
-                height: kHeight / 2,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      ImagesFiles.kPassengers,
-                    ),
-                    fit: BoxFit.contain,
-                  ),
-                ),
+              ContainerImageWidget(
+                kWidth: kWidth,
+                kHeight: kHeight / 2,
+                image: ImagesFiles.kPassengers,
+                boxFit: BoxFit.contain,
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class ContainerImageWidget extends StatelessWidget {
+  const ContainerImageWidget(
+      {Key? key,
+      required this.kWidth,
+      required this.kHeight,
+      required this.image,
+      required this.boxFit})
+      : super(key: key);
+
+  final double kWidth;
+  final double kHeight;
+  final String image;
+  final BoxFit boxFit;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: kWidth,
+      height: kHeight,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+            image,
+          ),
+          fit: boxFit,
         ),
       ),
     );
