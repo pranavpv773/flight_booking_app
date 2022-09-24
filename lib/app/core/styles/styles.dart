@@ -1,3 +1,4 @@
+import 'package:flight_booking_app/app/core/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,8 +16,8 @@ class AppTextStyles {
   static TextStyle h2 = TextStyle(
     fontFamily: fontFamily,
     letterSpacing: 1,
-    fontWeight: FontWeight.w300,
-    fontSize: 35,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
   );
 
   static TextStyle h3 = TextStyle(
@@ -33,7 +34,8 @@ class AppTextStyles {
 
   static TextStyle h5 = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 20,
+    fontSize: 12,
+    color: AppColor.kGrey,
     fontWeight: FontWeight.w500,
   );
 
