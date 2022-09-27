@@ -16,13 +16,19 @@ class CheckoutScreen extends StatelessWidget {
       body: ListView(
         children: [
           const AppBarWidget(),
-          PaymentCardsWidgets(kWidth: kWidth, kHeight: kHeight),
+          PaymentCardsWidgets(
+            kWidth: kWidth,
+            kHeight: kHeight,
+          ),
           CardBuilderWidget(
             kWidth: kWidth,
             kHeight: kHeight,
             actionText: 'Details',
           ),
-          TimeLabelCardWidget(kWidth: kWidth, kHeight: kHeight),
+          TimeLabelCardWidget(
+            kWidth: kWidth,
+            kHeight: kHeight,
+          ),
           const ElavatedButtonWidget(
             action: 'Proceed',
           ),

@@ -1,3 +1,5 @@
+import 'package:flight_booking_app/app/Home/view/widgets/textform_widget.dart';
+import 'package:flight_booking_app/app/core/styles/colors.dart';
 import 'package:flight_booking_app/app/core/styles/images.dart';
 import 'package:flight_booking_app/app/core/styles/styles.dart';
 import 'package:flight_booking_app/app/core/widgets/buttons.dart';
@@ -77,6 +79,7 @@ class ContainerImageWidget extends StatelessWidget {
       required this.kWidth,
       required this.kHeight,
       required this.image,
+      this.child,
       required this.boxFit})
       : super(key: key);
 
@@ -84,6 +87,7 @@ class ContainerImageWidget extends StatelessWidget {
   final double kHeight;
   final String image;
   final BoxFit boxFit;
+  final Widget? child;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -97,6 +101,7 @@ class ContainerImageWidget extends StatelessWidget {
           fit: boxFit,
         ),
       ),
+      child: child ?? const SizedBox(),
     );
   }
 }

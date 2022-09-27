@@ -13,6 +13,7 @@ class CardForm extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: TabTextforms(
+            innerColor: AppColor.kWhite,
             icon: Icons.flight_takeoff_sharp,
             text: 'From',
             obscureText: false,
@@ -20,11 +21,12 @@ class CardForm extends StatelessWidget {
             color: AppColor.kPrimary!,
           ),
         ), // ),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 20.0),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
           child: Align(
             alignment: Alignment.bottomCenter,
             child: TabTextforms(
+              innerColor: AppColor.kWhite,
               icon: Icons.flight_land_rounded,
               color: Colors.blueAccent,
               text: 'To',
