@@ -70,17 +70,20 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const RowListWidget(),
-                    SizedBox(
-                        width: kWidth,
-                        height: kHeight,
-                        child: ListView(
-                            children: List.generate(
-                          7,
-                          (index) => CardBuilderWidget(
-                            kWidth: kWidth,
-                            kHeight: kHeight,
-                          ),
-                        )))
+                    ListView.separated(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        return CardBuilderWidget(
+                          kWidth: kWidth,
+                          kHeight: kHeight,
+                        );
+                      },
+                      separatorBuilder: (context, index) => const SizedBox(
+                        height: 10,
+                      ),
+                      itemCount: 14,
+                    )
                   ],
                 ),
               ),
@@ -105,7 +108,9 @@ class CardBuilderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20.0,
+      ),
       child: Container(
         width: kWidth,
         height: kHeight / 2.8,
@@ -281,6 +286,7 @@ class TabBarCardWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Expanded(
+          flex: 4,
           child: DefaultTabController(
             length: 3,
             child: Column(
@@ -317,6 +323,7 @@ class TabBarCardWidget extends StatelessWidget {
                   ),
                 ),
                 const Expanded(
+                  flex: 12,
                   child: TabBarView(
                     physics: BouncingScrollPhysics(),
                     children: [
