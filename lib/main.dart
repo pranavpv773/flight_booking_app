@@ -1,5 +1,6 @@
 import 'package:flight_booking_app/app/checkout/view/checkout_screen.dart';
 import 'package:flight_booking_app/app/core/styles/colors.dart';
+import 'package:flight_booking_app/app/search_flight/view/search_screen.dart';
 import 'package:flight_booking_app/app/splash/view_model/splash_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: AppColor.kBackground,
           primarySwatch: Colors.blue,
         ),
-        home: const CheckoutScreen(),
+        home: const SearchScreen(),
       ),
     );
   }

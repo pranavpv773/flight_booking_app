@@ -12,7 +12,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final kWidth = MediaQuery.of(context).size.width;
     final kHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       backgroundColor: const Color.fromARGB(241, 255, 254, 254),
       body: SingleChildScrollView(
