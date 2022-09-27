@@ -77,6 +77,7 @@ class HomeScreen extends StatelessWidget {
                         return CardBuilderWidget(
                           kWidth: kWidth,
                           kHeight: kHeight,
+                          actionText: 'Book Now',
                         );
                       },
                       separatorBuilder: (context, index) => const SizedBox(
@@ -100,11 +101,12 @@ class CardBuilderWidget extends StatelessWidget {
     Key? key,
     required this.kWidth,
     required this.kHeight,
+    required this.actionText,
   }) : super(key: key);
 
   final double kWidth;
   final double kHeight;
-
+  final String actionText;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -146,7 +148,7 @@ class CardBuilderWidget extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            '💲150',
+                            '\$150',
                             style: TextStyle(color: AppColor.kWhite),
                           ),
                         ),
@@ -195,12 +197,15 @@ class CardBuilderWidget extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        'Book Now',
+                        actionText,
                         style: TextStyle(
                           color: AppColor.kPrimary,
                         ),
                       ),
-                      const Icon(Icons.arrow_right)
+                      Icon(
+                        Icons.arrow_right,
+                        color: AppColor.kPrimary,
+                      )
                     ],
                   ),
                 )

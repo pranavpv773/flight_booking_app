@@ -19,6 +19,22 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 16,
   );
+  TextStyle colorChange(Color colors) {
+    return TextStyle(
+      fontFamily: fontFamily,
+      letterSpacing: 1,
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+    );
+  }
+
+  static TextStyle headings = TextStyle(
+    color: AppColor.kBlack,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 2,
+    fontFamily: GoogleFonts.radley().fontFamily,
+  );
 
   static TextStyle h3 = TextStyle(
     fontFamily: fontFamily,
@@ -45,9 +61,10 @@ class AppTextStyles {
       fontWeight: FontWeight.bold,
       letterSpacing: 2);
 
-  static TextStyle bodySm = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 14,
+  static TextStyle numStyle = TextStyle(
+    fontSize: 16,
+    fontFamily: GoogleFonts.notoSansSymbols().fontFamily,
+    fontWeight: FontWeight.bold,
   );
 
   static TextStyle bodyLg = TextStyle(
