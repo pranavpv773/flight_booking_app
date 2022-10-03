@@ -93,6 +93,9 @@ class SearchScreen extends StatelessWidget {
                                         'Bussiness Trip To Newyork',
                                         style: AppTextStyles.h2,
                                       ),
+                                    ),
+                                    Row(
+                                      children: [],
                                     )
                                   ],
                                 ),
